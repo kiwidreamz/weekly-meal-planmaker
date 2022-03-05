@@ -352,15 +352,23 @@ def calculate_percentage(macros):
     calories_from_protein = macros.get("average_protein") * 4
     calories = macros.get("average_calories")
 
-    fat = round((calories_from_fat / calories) * 100)
-    carb = round((calories_from_carb / calories) * 100)
-    protein = round((calories_from_protein / calories) * 100)
-    
-    percentage = {
-        "fat": fat,
-        "carb": carb, 
-        "protein": protein
-    }
+    if calories == 0:
+        percentage = {
+            "fat": 33,
+            "carb": 33, 
+            "protein": 33
+        }
+
+    else:
+        fat = round((calories_from_fat / calories) * 100)
+        carb = round((calories_from_carb / calories) * 100)
+        protein = round((calories_from_protein / calories) * 100)
+        
+        percentage = {
+            "fat": fat,
+            "carb": carb, 
+            "protein": protein
+        }
 
     return percentage
     
