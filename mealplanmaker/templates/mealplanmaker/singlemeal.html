@@ -1,0 +1,223 @@
+{% extends "mealplanmaker/layout.html" %}
+
+{% block body %}
+<br>
+<h1 style="color: #003C5F; size: 15pt; text-align: center;">Create Meal</h1>
+<br><br>
+
+
+<div style="max-width: 600px; margin: auto;">
+
+    {% if not user.is_authenticated %}
+
+    <div class="alert alert-primary" role="alert" style="width: 600px;">
+        <p style="font-size: large; text-align: center; margin-top: 15px;">
+        Only users that are <a href="{% url 'login' %}" class="alert-link">Logged in</a> can create a meal.<br><br>
+        If you do not have an account, you can <a href="{% url 'register' %}">Create one here.</a>
+        </p>
+    </div>
+
+
+    {% else %}
+
+    <form id="singlemealform" method="post" action="{% url 'singlemeal' %}">
+        {% csrf_token %}
+
+        <div class="form-group">
+            <input type="text" class="form-control" name="mealtitle" id="mealtitle" placeholder="Give your meal a title">
+        </div>
+        <br>
+
+        <div class="form-group">
+            <label for="carbsource" style="font-weight: bold;">Select Carb Source</label><br>
+            <div class="form-inline">
+
+                <select class="form-control" name="carbsource" id="carbsource" style="width: 450px;">
+                    <option value="23"></option>
+                    <option value="1">Bread</option>
+                    <option value="2">Rice</option>
+                    <option value="3">Pasta</option>
+                    <option value="4">Oats</option>
+                    <option value="5">Flour</option>
+                    <option value="6">Tortilla</option>
+                    <option value="7">Potato</option>
+                    <option value="8">Corn</option>
+                    <option value="9">Beans</option>
+                    <option value="10">Lentils</option>
+                    <option value="11">Sweet Potato</option>
+                    <option value="12">Mixed Vegetables</option>
+                    <option value="13">Apple</option>
+                    <option value="14">Banana</option>
+                    <option value="15">Orange</option>
+                    <option value="16">Honey</option>
+                    <option value="17">Jam</option>
+                    <option value="18">Candy</option>
+                    <option value="19">Chocolate</option>
+                    <option value="20">Chips</option>
+                    <option value="21">Breakfast Cereal</option>
+                    <option value="22">Pancakes</option>
+                </select>
+
+                <input type="text" class="form-control" name="carbgrams" id="carbgrams" placeholder="grams" style="margin-left: 50px; width: 100px;">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="fatsource" style="font-weight: bold;">Select Fat Source</label><br>
+            <div class="form-inline">
+
+                <select class="form-control" name="fatsource" id="fatsource" style="width: 450px;">
+                    <option value="16"></option>
+                    <option value="1">Almonds</option>
+                    <option value="2">Macadamia Nuts</option>
+                    <option value="3">Cashew Nuts</option>
+                    <option value="4">Walnuts</option>
+                    <option value="5">Pistachio Nuts</option>
+                    <option value="6">Peanut Butter</option>
+                    <option value="7">Avocado</option>
+                    <option value="8">Oil</option>
+                    <option value="9">Butter</option>
+                    <option value="10">Seeds</option>
+                    <option value="11">Margerine</option>
+                    <option value="12">Ghee</option>
+                    <option value="13">Average Dressing</option>
+                    <option value="14">Dark Chocolate (85%)</option>
+                    <option value="15">Cream Cheese</option>
+                    <option value="17">Mayonnaise</option>
+                    <option value="18">Sour Cream</option>
+                    <option value="19">Double Cream</option>
+                    <option value="20">Creme Fraiche</option>
+                    
+                </select>
+
+                <input type="text" class="form-control" name="fatgrams" id="fatgrams" placeholder="grams" style="margin-left: 50px; width: 100px;">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="proteinsource" style="font-weight: bold;">Select Protein Source</label><br>
+            <div class="form-inline">
+
+                <select class="form-control" name="proteinsource" id="proteinsource" style="width: 450px;">
+                    <option value="31"></option>
+                    <option value="1">Chicken or Turkey - Breast</option>
+                    <option value="2">Chicken - Leg</option>
+                    <option value="3">Turkey - Leg</option>
+                    <option value="4">Chicken - Ground</option>
+                    <option value="5">Turkey - Ground</option>
+                    <option value="6">Beef - Ground</option>
+                    <option value="7">Beef - Steak</option>
+                    <option value="8">Ham (Deli)</option>
+                    <option value="9">Turkey - Bacon</option>
+                    <option value="10">Pork - Bacon</option>
+                    <option value="11">Pork - Chop or Tenderloin</option>
+                    <option value="12">Pork - Ribs</option>
+                    <option value="13">Salami</option>
+                    <option value="14">Salmon - Canned</option>
+                    <option value="15">Salmon - Smoked</option>
+                    <option value="16">Salmon - Fresh</option>
+                    <option value="17">Tuna - Canned</option>
+                    <option value="18">Tuna - Fresh</option>
+                    <option value="19">White Fish</option>
+                    <option value="20">Eggs</option>
+                    <option value="21">Greek Yogurt</option>
+                    <option value="22">Cheddar</option>
+                    <option value="23">American Cheese</option>
+                    <option value="24">Mozzarella</option>
+                    <option value="25">Parmesan</option>
+                    <option value="26">French Cheese (Camembert)</option>
+                    <option value="27">Swiss Cheese (Emmental)</option>
+                    <option value="28">Tofu</option>
+                    <option value="29">Beef Jerky</option>
+                    <option value="30">Sausage</option>
+                </select>
+
+                <input type="text" class="form-control" name="proteingrams" id="proteingrams" placeholder="grams" style="margin-left: 50px; width: 100px;">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="drinksource" style="font-weight: bold;">Select Drink</label><br>
+            <div class="form-inline">
+
+                <select class="form-control" name="drinksource" id="drinksource" style="width: 450px;">
+                    <option value="14"></option>
+                    <option value="1">Water</option>
+                    <option value="2">Soda</option>
+                    <option value="3">Sugar-free Soda</option>
+                    <option value="4">Tea</option>
+                    <option value="5">Coffee (Black)</option>
+                    <option value="6">Coffee (Latte)</option>
+                    <option value="7">Coffee (Mocha)</option>
+                    <option value="8">Fruit Juice</option>
+                    <option value="9">Milk</option>
+                    <option value="10">Beer</option>
+                    <option value="11">Wine</option>
+                    <option value="12">Energy Drink</option>
+                    <option value="13">Sports Drink (Gatorade)</option>
+                </select>
+
+                <input type="text" class="form-control" name="drinkmililiters" id="drinkmililiters" placeholder="ml" style="margin-left: 50px; width: 100px;">
+            </div>
+        </div>
+
+        <br>
+        <button type="submit" class="btn btn-success">Save Meal</button>
+
+
+    </form>
+    {% endif %}
+
+
+    <br><br><br>
+    <h3 style="color: #003C5F; size: 15pt; text-align: center;">My Meals</h3>
+    <br><br>
+
+    {% if all_meals %}
+
+        {% for meal in all_meals %}
+
+        <div class="card" style="width: 600px; margin-bottom: 20px; border-radius: 8px; border-color: gainsboro; text-align: center;">
+            <div class="card-body" style="width: 600px;">
+                <div>
+                    <h5 class="card-title">{{meal.name}}</h5>
+                </div>
+
+                <div style="display: inline;">
+                    <span style="color: #003C5F; font-weight: bolder; margin-right: 5px;">{{meal.calories}} calories</span>
+                    <span>{{meal.totalcarb}}g Carbs -</span>
+                    <span>{{meal.totalfat}}g Fat - </span>
+                    <span>{{meal.totalprotein}}g Protein</span>
+                </div>
+
+                <div style="margin-top: 10px;">
+                <p class="card-text" >{{meal.ingredients}}</p>
+                </div>
+
+                <form method="post" action="{% url 'deletemeal' %}">
+                    {% csrf_token %}
+                    <input type="hidden" id="mealtodelete" name="mealtodelete" value="{{meal.id}}">
+                    <button type="submit" class="btn btn-outline-danger" style="margin-top: 10px;">Delete Meal</button>
+                </form>
+            </div>
+        </div>
+
+        {% endfor %}
+    
+    {% else %}
+
+    <div class="card" style="width:  600px; margin-bottom: 20px; border-radius: 8px; border-color: gainsboro;">
+        <div class="card-body">
+            <p class="card-text" style="font-size:large;">You do not have any saved meals currently.</p>
+        </div>
+    </div>
+
+    {% endif %}
+
+
+</div>
+
+<br><br><br>
+
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends "mealplanmaker/layout.html" %}
+
+{% block body %}
+    
+{% if message %}
+
+<div class="container" id="newpost_container" style="width: 64rem; margin: 20px 20px 20px 20px; border: 1px solid; border-radius: 8px; border-color: gainsboro;">
+  <div class="form-group">
+      <label for="exampleFormControlTextarea1" style="font-weight: bolder; font-size: large; margin-top: 10px;">{{ message }}</label>
+  </div>
+</div>
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,60 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}Meal Plan Maker{% endblock %}</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'styles.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+    <body style="max-width: 100%; overflow-x: hidden;">
+
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="{% url 'index' %}">Weekly Meal Plan Maker</a>
+          
+            <div style="text-align: center; margin: 0; padding: 0;">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'tdee' %}">TDEE Calorie Calculator</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'singlemeal' %}">Single Meal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'weekly' %}"></a>
+                </li>
+                {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'logout' %}" style="font-weight: bold;">Log Out</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'login' %}" style="font-weight: bold;">Log In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'register' %}" style="font-weight: bold;">Register</a>
+                    </li>
+                {% endif %}
+              </ul>
+            </div>
+          </nav>
+        
+        <div class="body">
+            <div class="container" style="margin: auto;">
+                <div style="margin: auto; max-width: 600px;">
+                    {% block body %}
+                    {% endblock %}
+                </div>
+            </div> 
+        </div> 
+
+        
+    {% block script %}
+    <script src="{% static 'mealplanmaker.js' %}"></script>
+    
+    {% endblock %}

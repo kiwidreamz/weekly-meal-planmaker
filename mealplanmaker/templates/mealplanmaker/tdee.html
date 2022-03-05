@@ -1,0 +1,74 @@
+{% extends "mealplanmaker/layout.html" %}
+
+{% block body %}
+<br>
+<h1 style="color: #003C5F; size: 15pt; text-align: center;">TDEE Calculator</h1>
+<br>
+
+<div style="max-width: 600px; margin: auto;">
+<form onsubmit="return false;" id="tdeeform">
+
+    <div class="form-group">
+      <label for="weight" style="font-weight: bold;">Weight</label>
+      <input type="text" class="form-control" name="weight" id="weight" placeholder="kg" onkeydown="calculateCalories();">
+    </div>
+
+    <div class="form-group">
+        <label for="height" style="font-weight: bold;">Height</label>
+        <input type="text" class="form-control" name="height" id="height" placeholder="cm" onkeydown="calculateCalories();">
+    </div>
+
+    <div class="form-group">
+        <label for="gender" style="font-weight: bold;">Gender</label>
+        <br>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="maleradio" value="male" onclick="calculateCalories();">
+            <label class="form-check-label" for="maleradio">Male</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="femaleradio" value="female" onclick="calculateCalories();">
+            <label class="form-check-label" for="femaleradio">Female</label>
+        </div>
+    </div>
+
+      <div class="form-group">
+        <label for="age" style="font-weight: bold;">Age</label>
+        <input type="text" class="form-control" name="age" id="age" placeholder="30" onkeydown="calculateCalories();">
+    </div>
+
+    <div class="form-group">
+      <label for="activitylevel" style="font-weight: bold;">Activity Level</label>
+      <select class="form-control" id="activitylevel" onchange="calculateCalories();">
+        <option value="1">Sedentary (office job)</option>
+        <option value="2">Light (1-3 days/week)</option>
+        <option value="3">Moderate (3-5 days/week)</option>
+        <option value="4">Heavy (6-7 days/week)</option>
+        <option value="5">Athlete (twice a day)</option>
+      </select>
+    </div>
+
+</form>
+</div>
+
+<br>
+
+<h4 style="color: #404040; text-align: center;">Your Daily Calories:</h4>
+<br>
+<h1 style="color: #007EC7; text-align: center;" id="calories_result">{{ calories }}</h1>
+
+<br><br>
+
+<div style="max-width: 600px; margin: auto;">
+    <p style="text-align: center; size: 12sp; font-weight: lighter; text-align: justify; color: #003C5F;"> 
+        This is an average figure using the Harris-Benedict equations revised by Mifflin and St Jeor, an equation predictive for modern lifestyles. 
+        It does not account for lean body mass and body composition, 
+        meaning total daily energy expenditure might be a little higher for a very lean and muscular individual, 
+        while slightly lower for a plus size individual.
+    </p>
+</div>
+<br>
+
+
+
+
+{% endblock %}
