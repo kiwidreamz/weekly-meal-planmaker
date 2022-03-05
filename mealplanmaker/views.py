@@ -28,7 +28,7 @@ def login_view(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "network/login.html", {
+            return render(request, "mealplanmaker/login.html", {
                 "message": "Invalid username and/or password."
             })
     else:
