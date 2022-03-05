@@ -122,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "mealplanmaker/static"),
+    os.path.join(BASE_DIR, "mealplanmaker/static/"),
 )
 
 STATIC_URL = "mealplanmaker/static/"
