@@ -3,6 +3,8 @@
 This is my final project for CS50's Web Programming with Python and Javascript Course.
 As the capstone project for this course, my task was to design and implement a dynamic web application, albeit with a few requirements and constraints.
 
+Here is a [link to the working app] (http://mealplanmaker.pythonanywhere.com/)
+
 I will here be discussing the distinctiveness and complexity of my project, what each file contains, how to run this application and any other additional information needed.
 
 My initial idea for this project was to create an application that would allow users to create a weekly meal plan, and for said application to automatically calculate macronutrients(fats, carbs, and proteins) as well as general calories as a daily average based on the meals selected. 
@@ -83,8 +85,7 @@ Most of the styling in this app was done using Bootstrap, and my app is fully mo
 Since this is the best project I made so far in my short life as a developer, I wanted to get hosting and make my website available online. 
 After doing some research online, I found two main options that had a free plan offering, [pythonanywhere.com](https://www.pythonanywhere.com/) and [Heroku](https://www.heroku.com/).
 
-Having already used the free option from pythonanywhere for my [Premier League Team Quiz](http://premierleagueteamquiz.pythonanywhere.com/) web app, which was my final project for CS50's Introduction to Computer Science, I decided to look at Heroku.
-
-
+I decided to go with pythonanywhere, and after a little bit of struggle, I managed to get it to work.
+Here is a [link to it] (http://mealplanmaker.pythonanywhere.com/)
 
 
