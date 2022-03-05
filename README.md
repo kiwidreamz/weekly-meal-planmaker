@@ -83,7 +83,7 @@ Most of the styling in this app was done using Bootstrap, and my app is fully mo
 ### Hosting
 
 Since this is the best project I made so far in my short life as a developer, I wanted to get hosting and make my website available online. 
-After doing some research online, I found two main options that had a free plan offering, [pythonanywhere.com](https://www.pythonanywhere.com/) and [Heroku](https://www.heroku.com/).
+After doing some research online, I found two main options that had a free plan offering, [pythonanywhere](https://www.pythonanywhere.com/) and [Heroku](https://www.heroku.com/).
 
 I decided to go with pythonanywhere, and after a little bit of struggle, I managed to get it to work.
 Here is a [link](http://mealplanmaker.pythonanywhere.com/) to it.
