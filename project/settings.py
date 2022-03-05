@@ -125,5 +125,5 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "mealplanmaker/static"),
 )
 
-STATIC_URL = 'static/'
+STATIC_URL = "mealplanmaker/static"
 
