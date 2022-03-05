@@ -121,9 +121,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "/mealplanmaker/static/"),
-)
+#STATICFILES_DIRS = (
+#    os.path.join("/mealplanmaker/static/"),
+#)
 
 STATIC_URL = "/mealplanmaker/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, '/mealplanmaker/static/')
 
