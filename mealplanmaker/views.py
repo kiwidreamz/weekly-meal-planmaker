@@ -1,22 +1,8 @@
-from argparse import MetavarTypeHelpFormatter
-from calendar import week
-from cgi import print_environ
-from datetime import date, datetime
-from email import message
-from multiprocessing import context
-from turtle import title
-from urllib import request
-from xmlrpc.client import DateTime
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.decorators import login_required
 from django.db import IntegrityError
-from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse
-from django.core.paginator import Paginator
-import datetime
-from django.views.decorators.csrf import csrf_exempt
-import json
 
 from .models import Carbs, Drinks, Fats, Meals, Proteins, User, Weekly
 
