@@ -3,7 +3,7 @@
 This is my final project for CS50's Web Programming with Python and Javascript Course.
 As the capstone project for this course, my task was to design and implement a dynamic web application, albeit with a few requirements and constraints.
 
-Here is a [link to the working app] (http://mealplanmaker.pythonanywhere.com/)
+Here is a [link to the working app](http://mealplanmaker.pythonanywhere.com/)
 
 I will here be discussing the distinctiveness and complexity of my project, what each file contains, how to run this application and any other additional information needed.
 
@@ -86,6 +86,6 @@ Since this is the best project I made so far in my short life as a developer, I 
 After doing some research online, I found two main options that had a free plan offering, [pythonanywhere.com](https://www.pythonanywhere.com/) and [Heroku](https://www.heroku.com/).
 
 I decided to go with pythonanywhere, and after a little bit of struggle, I managed to get it to work.
-Here is a [link to it] (http://mealplanmaker.pythonanywhere.com/)
+Here is a [link](http://mealplanmaker.pythonanywhere.com/) to it.
 
 
