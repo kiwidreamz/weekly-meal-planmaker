@@ -126,5 +126,5 @@ USE_TZ = True
 #)
 
 STATIC_URL = "/mealplanmaker/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, '/mealplanmaker/static/')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
