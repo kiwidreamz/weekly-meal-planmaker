@@ -116,6 +116,11 @@ setTimeout(function () {
   // Calculate calories
   calories_result = ((weight * 10) + (height * 6.25) - (5 * age) + gender_value) * activitylevel_value;
 
+  // Negative calories error fixing
+  if (calories_result < 0) {
+    calories_result = 0
+  }
+
   // Update view
   document.getElementById('calories_result').innerHTML = calories_result.toFixed(0);
 
