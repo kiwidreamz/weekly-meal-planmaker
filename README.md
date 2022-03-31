@@ -1,9 +1,11 @@
 # Weekly Meal Plan Maker
 
+#### Video Demo:  <https://youtu.be/DdUETc1vdOo>
+
+#### Access Link: <http://mealplanmaker.pythonanywhere.com>
+
 This is my final project for CS50's Web Programming with Python and Javascript Course.
 As the capstone project for this course, my task was to design and implement a dynamic web application, albeit with a few requirements and constraints.
-
-Here is a [link to the working app](http://mealplanmaker.pythonanywhere.com/)
 
 I will here be discussing the distinctiveness and complexity of my project, what each file contains, how to run this application and any other additional information needed.
 
