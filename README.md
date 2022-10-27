@@ -7,7 +7,7 @@
 This is my final project for CS50's Web Programming with Python and Javascript Course.
 As the capstone project for this course, my task was to design and implement a dynamic web application, albeit with a few requirements and constraints.
 
-I will here be discussing the distinctiveness and complexity of my project, what each file contains, how to run this application and any other additional information needed.
+I will be discussing the distinctiveness and complexity of my project, what each file contains, how to run this application and any other additional information needed.
 
 My initial idea for this project was to create an application that would allow users to create a weekly meal plan, and for said application to automatically calculate macronutrients(fats, carbs, and proteins) as well as general calories as a daily average based on the meals selected. 
 
