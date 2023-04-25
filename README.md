@@ -11,7 +11,7 @@ I will be discussing the distinctiveness and complexity of my project, what each
 
 My initial idea for this project was to create an application that would allow users to create a weekly meal plan, and for said application to automatically calculate macronutrients(fats, carbs, and proteins) as well as general calories as a daily average based on the meals selected. 
 
-Having always been interested in fitness, I know that nutrition is just as important, if not more, than working out for both losing weight (burning fat or getting leaner) or gaining weight (muscle size).
+Having always been interested in fitness, I know that nutrition is just as important, if not more, than working out for both losing weight (burning fat and getting leaner) or gaining weight (muscle size).
 
 However, one of the main things I hear people complain about is that counting calories is hard enough, let alone figuring out and tracking macros (fats, carbs, and proteins). I wanted to find a way to make this whole ordeal easier instead of tracking macros meal by meal after consuming said meal, which would be a tedious manual task that requires a lot of self-discipline in the long run, and which I believe is one of the main reasons people would want to lose or gain weight tend to give up. 
 
