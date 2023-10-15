@@ -2,7 +2,7 @@
 
 #### Video Demo:  <https://youtu.be/DdUETc1vdOo>
 
-#### Access Link: <http://mealplanmaker.pythonanywhere.com>
+#### Web App Access Link: <http://mealplanmaker.pythonanywhere.com>
 
 This is my final project for CS50's Web Programming with Python and Javascript Course.
 As the capstone project for this course, my task was to design and implement a dynamic web application, albeit with a few requirements and constraints.
